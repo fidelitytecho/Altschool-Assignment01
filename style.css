@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+	isolation: isolate;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+
+	> ul {
+		list-style: none;
+		padding-block: 10px;
+		margin: 0;
+		display: flex;
+		gap: 10px;
+
+		> li {
+			text-decoration: none;
+
+			> a {
+				text-decoration: none;
+				color: unset;
+				&:hover {
+					color: #9a2333;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+ul li .active {
+	color: #9a2333;
+	text-decoration: underline;
+	font-weight: 500;
+}
+
+.container {
+	max-width: 700px;
+	margin: 20px auto;
+	background-color: #e4e4e7;
+	border-radius: 8px;
+	padding-inline: 20px;
+	padding-block-start: 10px;
+	padding-block-end: 20px;
+}
+
+section:not(:first-of-type) {
+	margin-top: 20px;
+}
+
+section h1 {
+	text-align: center;
+	font-weight: 600;
+	font-size: 28px;
+}
+
+section h2 {
+	text-align: center;
+	font-weight: 500;
+	font-size: 24px;
+}
+
+section .special {
+	text-align: center;
+
+	font-family: 'Outfit';
+}
+
+section .form_header {
+	text-align: start;
+}
+
+.form_wrapper {
+	display: grid;
+	gap: 40px;
+	margin-top: 20px;
+
+	> .form_row {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 20px;
+
+		> .form_element {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+
+			> label::after {
+				display: inline-block;
+				content: '*';
+				color: red;
+				margin-left: 4px;
+			}
+
+			> input,
+			select {
+				color: #666;
+				border-radius: 8px;
+				border: 1px solid #e4e4e7;
+				padding-inline: 10px;
+				padding-block: 12px;
+			}
+		}
+	}
+
+	> .form_footer {
+		display: grid;
+		gap: 20px;
+
+		> button {
+			background-color: #6a6ff5;
+			color: white;
+			border-radius: 4px;
+			padding-block: 12px;
+			border: none;
+		}
+
+		> small {
+			text-align: center;
+		}
+	}
+}
+
+#date_input {
+	padding-block: 10px;
+}
+
+#select_input {
+	height: 100%;
+}
